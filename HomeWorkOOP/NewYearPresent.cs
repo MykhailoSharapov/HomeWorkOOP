@@ -8,6 +8,53 @@ namespace HomeWorkOOP
 {
     public class NewYearPresent
     {
+        private Sweet[] sweets = new Sweet[] { };
+        
+        public void AddChocolateToPresent()
+        {
+            var rand = new Random();
+            Chokolate choko;            
+            for (var i = 0; i < 5; i++)
+            {
+                var randParametr = rand.Next(1, 101);
+                choko = new Chokolate($"konf:{randParametr}", randParametr, randParametr, "some shape", "vag", randParametr, DateTime.Now.AddDays(-1));
+                Array.Resize<Sweet>(ref sweets, sweets.Length+1);
+                sweets[sweets.Length-1] = choko;
+            }
+        }
+        public void AddLolipopsToPresent()
+        {
+            var rand = new Random();
+            Lolipop lolipop;
+            for (var i = 0; i < 5; i++)
+            {
+                var randParametr = rand.Next(1, 101);
+                lolipop = new Lolipop($"konf:{randParametr}", randParametr, randParametr, "some shape", "toyota", randParametr,"some filing" );
+                Array.Resize<Sweet>(ref sweets, sweets.Length + 1);
+                sweets[sweets.Length - 1] = lolipop;
+            }
+        }
 
+        public void GetWeightOfPresent()
+        {
+            var weight = 0.0;
+            foreach(Sweet sweet in sweets)
+            {
+                weight += sweet.Weight;
+            }
+            Console.WriteLine($"Present weight: {weight}");
+        }
+        public void SortSweetsByWeight()
+        {
+            Array.Sort(sweets, new SweetComparer());
+            PrintAllSweets();
+        }
+        public void PrintAllSweets()
+        {
+            foreach (Sweet sweet in sweets)
+            {
+                Console.WriteLine(sweet.Name);
+            }
+        }
     }
 }
