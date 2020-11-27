@@ -9,12 +9,11 @@ namespace HomeWorkOOP
     public class NewYearPresent
     {
         private Sweet[] sweets = new Sweet[] { };
-        
-        public void AddChocolateToPresent()
+        public void AddChocolateToPresent(int SweetsCount)
         {
             var rand = new Random();
             Chokolate choko;            
-            for (var i = 0; i < 5; i++)
+            for (var i = 0; i < SweetsCount; i++)
             {
                 var randParametr = rand.Next(1, 101);
                 choko = new Chokolate($"konf:{randParametr}", randParametr, randParametr, "some shape", "vag", randParametr, DateTime.Now.AddDays(-1));
@@ -22,11 +21,11 @@ namespace HomeWorkOOP
                 sweets[sweets.Length-1] = choko;
             }
         }
-        public void AddLolipopsToPresent()
+        public void AddLolipopsToPresent(int SweetsCount)
         {
             var rand = new Random();
             Lolipop lolipop;
-            for (var i = 0; i < 5; i++)
+            for (var i = 0; i < SweetsCount; i++)
             {
                 var randParametr = rand.Next(1, 101);
                 lolipop = new Lolipop($"konf:{randParametr}", randParametr, randParametr, "some shape", "toyota", randParametr,"some filing" );
@@ -53,8 +52,18 @@ namespace HomeWorkOOP
         {
             foreach (Sweet sweet in sweets)
             {
-                Console.WriteLine(sweet.Name);
+                Console.WriteLine(GetDetail(sweet));
             }
+        }
+        public string GetDetail(Sweet sweet)
+        {
+            string result = $"name: {sweet.Name}, manufacturer: {sweet.Manufacturer}, sugar percentage: {sweet.SugarContentPercent}";
+            return result;
+        }
+        public void FindSweetBySugarPercent(int sugarPercent)
+        {
+            Sweet result = Array.Find<Sweet>(sweets, elem => elem.SugarContentPercent.Equals(sugarPercent));
+            Console.WriteLine(GetDetail(result));
         }
     }
 }
