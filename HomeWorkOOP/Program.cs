@@ -10,7 +10,15 @@ namespace HomeWorkOOP
     {
         static void Main(string[] args)
         {
-
+            NewYearPresent nyp = new NewYearPresent();
+            nyp.AddChocolateToPresent(10);
+            nyp.AddLolipopsToPresent(10);
+            nyp.GetWeightOfPresent();
+            Console.WriteLine("------------------------------");
+            nyp.PrintAllSweets();
+            Console.WriteLine("------------------------------");
+            nyp.SortSweetsByWeight();
+            Console.WriteLine("------------------------------");
         }
     }
 }

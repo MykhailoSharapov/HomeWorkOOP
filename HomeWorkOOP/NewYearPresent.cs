@@ -55,7 +55,7 @@ namespace HomeWorkOOP
                 Console.WriteLine(GetDetail(sweet));
             }
         }
-        public string GetDetail(Sweet sweet)
+        private string GetDetail(Sweet sweet)
         {
             string result = $"name: {sweet.Name}, manufacturer: {sweet.Manufacturer}, sugar percentage: {sweet.SugarContentPercent}";
             return result;
