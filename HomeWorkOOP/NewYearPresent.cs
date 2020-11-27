@@ -12,13 +12,13 @@ namespace HomeWorkOOP
         public void AddChocolateToPresent(int SweetsCount)
         {
             var rand = new Random();
-            Chokolate choko;            
+            Chokolate choko;
             for (var i = 0; i < SweetsCount; i++)
             {
                 var randParametr = rand.Next(1, 101);
                 choko = new Chokolate($"konf:{randParametr}", randParametr, randParametr, "some shape", "vag", randParametr, DateTime.Now.AddDays(-1));
-                Array.Resize<Sweet>(ref sweets, sweets.Length+1);
-                sweets[sweets.Length-1] = choko;
+                Array.Resize<Sweet>(ref sweets, sweets.Length + 1);
+                sweets[sweets.Length - 1] = choko;
             }
         }
         public void AddLolipopsToPresent(int SweetsCount)
@@ -28,7 +28,7 @@ namespace HomeWorkOOP
             for (var i = 0; i < SweetsCount; i++)
             {
                 var randParametr = rand.Next(1, 101);
-                lolipop = new Lolipop($"konf:{randParametr}", randParametr, randParametr, "some shape", "toyota", randParametr,"some filing" );
+                lolipop = new Lolipop($"konf:{randParametr}", randParametr, randParametr, "some shape", "toyota", randParametr, "some filing");
                 Array.Resize<Sweet>(ref sweets, sweets.Length + 1);
                 sweets[sweets.Length - 1] = lolipop;
             }
@@ -37,7 +37,7 @@ namespace HomeWorkOOP
         public void GetWeightOfPresent()
         {
             var weight = 0.0;
-            foreach(Sweet sweet in sweets)
+            foreach (Sweet sweet in sweets)
             {
                 weight += sweet.Weight;
             }
@@ -62,7 +62,7 @@ namespace HomeWorkOOP
         }
         public void FindSweetBySugarPercent(int sugarPercent)
         {
-            Sweet result = Array.Find<Sweet>(sweets, elem => elem.SugarContentPercent.Equals(sugarPercent));
+            var result = Array.Find<Sweet>(sweets, elem => elem.SugarContentPercent.Equals(sugarPercent));
             Console.WriteLine(GetDetail(result));
         }
     }

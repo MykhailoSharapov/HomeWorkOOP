@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HomeWorkOOP
 {
-    class SweetComparer : IComparer<Sweet>
+    public class SweetComparer : IComparer<Sweet>
     {
         public int Compare(Sweet s1, Sweet s2)
         {
