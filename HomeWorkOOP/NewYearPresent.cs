@@ -15,8 +15,7 @@ namespace HomeWorkOOP
             rand = new Random();
         }
         public void AddChocolateToPresent(int SweetsCount)
-        {
-            
+        {            
             Chokolate choko;
             for (var i = 0; i < SweetsCount; i++)
             {
