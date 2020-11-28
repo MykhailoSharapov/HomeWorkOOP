@@ -9,9 +9,14 @@ namespace HomeWorkOOP
     public class NewYearPresent
     {
         private Sweet[] sweets = new Sweet[] { };
+        private readonly Random rand;
+        public NewYearPresent()
+        {
+            rand = new Random();
+        }
         public void AddChocolateToPresent(int SweetsCount)
         {
-            var rand = new Random();
+            
             Chokolate choko;
             for (var i = 0; i < SweetsCount; i++)
             {
@@ -22,8 +27,7 @@ namespace HomeWorkOOP
             }
         }
         public void AddLolipopsToPresent(int SweetsCount)
-        {
-            var rand = new Random();
+        {            
             Lolipop lolipop;
             for (var i = 0; i < SweetsCount; i++)
             {
@@ -34,8 +38,7 @@ namespace HomeWorkOOP
             }
         }
         public void AddCoockieToPresent(int SweetsCount)
-        {
-            var rand = new Random();
+        {            
             CoocieChocolate coocieChoco;
             for (var i = 0; i < SweetsCount; i++)
             {
@@ -45,7 +48,6 @@ namespace HomeWorkOOP
                 sweets[sweets.Length - 1] = coocieChoco;
             }
         }
-
         public void GetWeightOfPresent()
         {
             var weight = 0.0;
