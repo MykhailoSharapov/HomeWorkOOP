@@ -13,5 +13,6 @@ namespace HomeWorkOOP
             Filling = filling;
         }
         public string Filling { get; private set; }
+        
     }
 }

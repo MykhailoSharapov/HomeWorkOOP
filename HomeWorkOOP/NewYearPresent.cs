@@ -16,11 +16,11 @@ namespace HomeWorkOOP
         }
         public void AddChocolateToPresent(int SweetsCount)
         {            
-            Chokolate choko;
+            SugarLike choko;
             for (var i = 0; i < SweetsCount; i++)
             {
                 var randParametr = rand.Next(1, 101);
-                choko = new Chokolate($"konf:{randParametr}", randParametr, randParametr, "some shape", "vag", randParametr, DateTime.Now.AddDays(-1));
+                choko = new SugarLike($"konf:{randParametr}", randParametr, randParametr, "some shape", "vag", randParametr, DateTime.Now.AddDays(-1));
                 Array.Resize<Sweet>(ref sweets, sweets.Length + 1);
                 sweets[sweets.Length - 1] = choko;
             }

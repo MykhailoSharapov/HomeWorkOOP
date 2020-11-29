@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace HomeWorkOOP
 {
-    public class Chokolate : Sweet
+    public class SugarLike : Sweet
     {
-        public Chokolate(string name, double weight, int sugarContentPercent, string shape, string manufacturer, double cost, DateTime expiration) : base(name, weight, sugarContentPercent, shape, manufacturer, cost)
+        public SugarLike(string name, double weight, int sugarContentPercent, string shape, string manufacturer, double cost, DateTime expiration) : base(name, weight, sugarContentPercent, shape, manufacturer, cost)
         {
             Expiration = expiration;
             if (Expiration > DateTime.Now)
@@ -22,5 +22,13 @@ namespace HomeWorkOOP
         }
         public DateTime Expiration { get; set; }
         public bool Condition { get; private set; }
+        public override bool IsCarriesCaller()
+        {
+            return false;
+        }
+        public override string MyUniqeName()
+        {
+            return "second name";
+        }
     }
 }

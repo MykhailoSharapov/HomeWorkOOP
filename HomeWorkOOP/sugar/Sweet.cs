@@ -14,6 +14,7 @@ namespace HomeWorkOOP
         string Name { get; set; }
         string Manufacturer { get; set; }
         double Cost { get; set; }
+        string MyUniqeName();
     }
 
     public abstract class Sweet : ISweet
@@ -33,5 +34,14 @@ namespace HomeWorkOOP
         public string Name { get; set; }
         public string Manufacturer { get; set; }
         public double Cost { get; set; }
+        public virtual bool IsCarriesCaller()
+        {
+            return true ;
+        }
+
+        public virtual string MyUniqeName()
+        {
+            return "fisrt name for cream and lolipos";
+        }
     }
 }
