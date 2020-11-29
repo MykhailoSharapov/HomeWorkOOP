@@ -15,7 +15,7 @@ namespace HomeWorkOOP
             rand = new Random();
         }
         public void AddChocolateToPresent(int SweetsCount)
-        {            
+        {
             SugarLike choko;
             for (var i = 0; i < SweetsCount; i++)
             {
@@ -26,7 +26,7 @@ namespace HomeWorkOOP
             }
         }
         public void AddLolipopsToPresent(int SweetsCount)
-        {            
+        {
             Lolipop lolipop;
             for (var i = 0; i < SweetsCount; i++)
             {
@@ -37,12 +37,12 @@ namespace HomeWorkOOP
             }
         }
         public void AddCoockieToPresent(int SweetsCount)
-        {            
+        {
             CoocieChocolate coocieChoco;
             for (var i = 0; i < SweetsCount; i++)
             {
                 var randParametr = rand.Next(1, 101);
-                coocieChoco = new CoocieChocolate($"konf:{randParametr}", randParametr, randParametr, "some shape", "BMW", randParametr, DateTime.Now.AddDays(-1),"Maria");
+                coocieChoco = new CoocieChocolate($"konf:{randParametr}", randParametr, randParametr, "some shape", "BMW", randParametr, DateTime.Now.AddDays(-1), "Maria");
                 Array.Resize<Sweet>(ref sweets, sweets.Length + 1);
                 sweets[sweets.Length - 1] = coocieChoco;
             }

@@ -36,9 +36,8 @@ namespace HomeWorkOOP
         public double Cost { get; set; }
         public virtual bool IsCarriesCaller()
         {
-            return true ;
+            return true;
         }
-
         public virtual string MyUniqeName()
         {
             return "fisrt name for cream and lolipos";

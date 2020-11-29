@@ -8,7 +8,7 @@ namespace HomeWorkOOP
 {
     public class CoocieChocolate : SugarLike
     {
-        public CoocieChocolate(string name, double weight, int sugarContentPercent, string shape, string manufacturer, double cost, DateTime expiration, string coockieType) : base(name, weight, sugarContentPercent, shape, manufacturer, cost,expiration)
+        public CoocieChocolate(string name, double weight, int sugarContentPercent, string shape, string manufacturer, double cost, DateTime expiration, string coockieType) : base(name, weight, sugarContentPercent, shape, manufacturer, cost, expiration)
         {
             CoockieType = coockieType;
         }

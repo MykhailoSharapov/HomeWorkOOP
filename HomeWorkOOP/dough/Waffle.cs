@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace HomeWorkOOP
 {
-    public class Waffle:Dough
+    public class Waffle : Dough
     {
-        public Waffle(double flourCount, string name, double sugarCount, double cost):base(flourCount,name,sugarCount,cost)
+        public Waffle(double flourCount, string name, double sugarCount, double cost) : base(flourCount, name, sugarCount, cost)
         {
-            
+
         }
         public override string AmIharmful()
         {

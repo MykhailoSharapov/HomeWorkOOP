@@ -14,7 +14,6 @@ namespace HomeWorkOOP
         double Cost { get; set; }
         string AmIharmful();
     }
-
     public class Dough : IDough
     {
         public Dough(double flourCount, string name, double sugarCount, double cost)
@@ -33,5 +32,4 @@ namespace HomeWorkOOP
             return "actualy no";
         }
     }
-
 }

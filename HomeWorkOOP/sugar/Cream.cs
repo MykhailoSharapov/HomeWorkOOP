@@ -13,6 +13,5 @@ namespace HomeWorkOOP
             Butter = butter;
         }
         public string Butter { get; private set; }
-
     }
 }

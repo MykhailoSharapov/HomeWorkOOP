@@ -19,7 +19,7 @@ namespace HomeWorkOOP
             FlourCount = flourCount;
             SugarCount = sugarDoughtCount;
         }
-        public double Weight { get ; set ; }
+        public double Weight { get; set; }
         public int SugarContentPercent { get; set; }
         public string Shape { get; set; }
         public string Name { get; set; }
@@ -27,12 +27,10 @@ namespace HomeWorkOOP
         public double Cost { get; set; }
         public double FlourCount { get; set; }
         public double SugarCount { get; set; }
-
         public string AmIharmful()
         {
             return "Yes, only for polymorfizm";
         }
-
         public string MyUniqeName()
         {
             return "best tortik";
