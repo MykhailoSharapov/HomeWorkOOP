@@ -13,7 +13,7 @@ namespace HomeWorkOOP
             Weight = weight;
             SugarContentPercent = sugarContentPercent;
             Shape = shape;
-            Name = Name;
+            Name = name;
             Manufacturer = manufacturer;
             Cost = cost;
             FlourCount = flourCount;

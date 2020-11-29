@@ -6,19 +6,12 @@ using System.Threading.Tasks;
 
 namespace HomeWorkOOP
 {
-    interface ISweet
-    {
-        double Weight { get; set; }
-        int SugarContentPercent { get; set; }
-        string Shape { get; set; }
-        string Name { get; set; }
-        string Manufacturer { get; set; }
-        double Cost { get; set; }
-        string MyUniqeName();
-    }
-
     public abstract class Sweet : ISweet
     {
+        public Sweet()
+        {
+
+        }
         public Sweet(string name, double weight, int sugarContentPercent, string shape, string manufacturer, double cost)
         {
             Name = name;

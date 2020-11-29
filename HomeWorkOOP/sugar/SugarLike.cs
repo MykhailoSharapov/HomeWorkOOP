@@ -8,20 +8,22 @@ namespace HomeWorkOOP
 {
     public class SugarLike : Sweet
     {
+        public SugarLike()
+        {
+
+        }
         public SugarLike(string name, double weight, int sugarContentPercent, string shape, string manufacturer, double cost, DateTime expiration) : base(name, weight, sugarContentPercent, shape, manufacturer, cost)
         {
             Expiration = expiration;
-            if (Expiration > DateTime.Now)
-            {
-                Condition = true;
-            }
-            else
-            {
-                Condition = false;
-            }
         }
         public DateTime Expiration { get; set; }
-        public bool Condition { get; private set; }
+        public bool Condition
+        {
+            get
+            {
+                return (Expiration > DateTime.Now) ? true : false;
+            }
+        }
         public override bool IsCarriesCaller()
         {
             return false;

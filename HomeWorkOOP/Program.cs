@@ -14,6 +14,7 @@ namespace HomeWorkOOP
             nyp.AddChocolateToPresent(10);
             nyp.AddLolipopsToPresent(10);
             nyp.AddCoockieToPresent(10);
+            nyp.AddZefirToPresent(10);
             nyp.GetWeightOfPresent();
             Console.WriteLine("------------------------------");
             nyp.PrintAllSweets();

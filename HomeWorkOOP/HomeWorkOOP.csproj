@@ -44,9 +44,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ChocolateBiscuit.cs" />
+    <Compile Include="dough\IDough.cs" />
+    <Compile Include="IProduct.cs" />
     <Compile Include="sugar\Cream.cs" />
     <Compile Include="dough\Dough.cs" />
     <Compile Include="dough\Waffle.cs" />
+    <Compile Include="sugar\ISweet.cs" />
     <Compile Include="sugar\Zefir.cs" />
     <Compile Include="sugar\SugarLike.cs" />
     <Compile Include="sugar\CoocieChocolate.cs" />

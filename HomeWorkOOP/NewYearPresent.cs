@@ -47,6 +47,20 @@ namespace HomeWorkOOP
                 sweets[sweets.Length - 1] = coocieChoco;
             }
         }
+        public void AddZefirToPresent(int SweetsCount)
+        {
+            Zefir zefir;
+            for (var i = 0; i < SweetsCount; i++)
+            {
+                var randParametr = rand.Next(1, 101);
+                zefir = new Zefir();
+                zefir.SugarContentPercent = randParametr;
+                zefir.Name = $"zefir konf:{randParametr}";
+                zefir.Weight = randParametr;
+                Array.Resize<Sweet>(ref sweets, sweets.Length + 1);
+                sweets[sweets.Length - 1] = zefir;
+            }
+        }
         public void GetWeightOfPresent()
         {
             var weight = 0.0;

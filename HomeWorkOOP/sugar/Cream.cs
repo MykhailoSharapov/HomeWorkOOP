@@ -12,6 +12,10 @@ namespace HomeWorkOOP
         {
             Butter = butter;
         }
+        public Cream()
+        {
+
+        }
         public string Butter { get; private set; }
     }
 }

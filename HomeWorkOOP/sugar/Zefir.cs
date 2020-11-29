@@ -8,6 +8,10 @@ namespace HomeWorkOOP
 {
     public class Zefir : SugarLike
     {
+        public Zefir()
+        {
+
+        }
         public Zefir(string name, double weight, int sugarContentPercent, string shape, string manufacturer, double cost, DateTime expiration, int beatenEggPercent) : base(name, weight, sugarContentPercent, shape, manufacturer, cost, expiration)
         {
             BeatenEggPercent = beatenEggPercent;
