@@ -1,39 +1,40 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿// <copyright file="ChocolateBiscuit.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
 
 namespace HomeWorkOOP
 {
-    public class ChocolateBiscuit : ISweet, IDough
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+    using System.Threading.Tasks;
+
+    public class ChocolateBiscuit : Sweet
     {
-        public ChocolateBiscuit(double weight, int sugarContentPercent, string shape, string name, string manufacturer, double cost, double flourCount, double sugarDoughtCount)
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ChocolateBiscuit"/> class.
+        /// </summary>
+        public ChocolateBiscuit()
         {
-            Weight = weight;
-            SugarContentPercent = sugarContentPercent;
-            Shape = shape;
-            Name = name;
-            Manufacturer = manufacturer;
-            Cost = cost;
-            FlourCount = flourCount;
-            SugarCount = sugarDoughtCount;
         }
-        public double Weight { get; set; }
-        public int SugarContentPercent { get; set; }
-        public string Shape { get; set; }
-        public string Name { get; set; }
-        public string Manufacturer { get; set; }
-        public double Cost { get; set; }
-        public double FlourCount { get; set; }
-        public double SugarCount { get; set; }
-        public string AmIharmful()
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ChocolateBiscuit"/> class.
+        /// </summary>
+        /// <param name="weight"></param>
+        /// <param name="sugarContentPercent"></param>
+        /// <param name="shape"></param>
+        /// <param name="name"></param>
+        /// <param name="manufacturer"></param>
+        /// <param name="cost"></param>
+        /// <param name="dough"></param>
+        public ChocolateBiscuit(double weight, int sugarContentPercent, string shape, string name, string manufacturer, double cost, Dough dough)
+            : base(name, weight, sugarContentPercent, shape, manufacturer, cost)
         {
-            return "Yes, only for polymorfizm";
+            this.Dough = dough;
         }
-        public string MyUniqeName()
-        {
-            return "best tortik";
-        }
+
+        public Dough Dough { get; set; }
     }
 }
